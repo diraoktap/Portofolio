@@ -2,6 +2,7 @@ import { projects } from '@/data/projects';
 import { notFound } from 'next/navigation';
 import ModalContainer from '@/components/ModalContainer'; // Kita akan buat ini
 import Link from 'next/link';
+import Button from '@/components/ui/buttons/Link';
 
 export default async function ProjectModal({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
@@ -19,14 +20,17 @@ export default async function ProjectModal({ params }: { params: Promise<{ slug:
             </div>
 
             {/* Tambahkan di bawah deskripsi pada modal */}
-            <div className="mt-6 flex justify-between items-center">
+            <Button href={`/projects/${project.slug}`} isExternal variant="outline">
+                Lihat Detail Lengkap
+            </Button>
+            {/* <div className="mt-6 flex justify-between items-center">
                 <a
                     href={`/projects/${project.slug}`}
                     className="bg-black text-white px-4 py-2 rounded-lg text-sm"
                 >
                     Lihat Detail Lengkap →
                 </a>
-            </div>
+            </div> */}
         </ModalContainer>
     );
 }

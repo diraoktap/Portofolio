@@ -20,8 +20,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal, // Tambahkan props modal di sini
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode; // Dan definisikan tipenya
 }>) {
   return (
     <html lang="en">
@@ -30,6 +32,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        {modal} {/* Render modal di sini agar sejajar dengan konten utama */}
       </body>
     </html>
   );

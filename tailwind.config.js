@@ -8,7 +8,8 @@ module.exports = {
         extend: {
             fontFamily: {
                 // Ganti namanya jadi 'pixel' agar simpel
-                pixel: ["var(--font-silkscreen)", "cursive"],
+                monoo: ["var(--font-space-mono)", "serif"],
+                silkscreen: ["var(--font-silkscreen)", "cursive"]
             },
         },
     },

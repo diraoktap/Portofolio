@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
-import { Space_Mono, Silkscreen } from "next/font/google";
 import localFont from 'next/font/local';
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
-const spaceMono = Space_Mono({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-  display: 'swap',
+// Konfigurasi Font Lokal
+const Space_Mono = localFont({
+  src: '../public/fonts/Space_Mono/SpaceMono-Regular.ttf', // Sesuaikan dengan nama file kamu
   variable: '--font-space-mono',
 });
 
@@ -34,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${spaceMono.variable} ${silkscreen.variable} antialiased`}
+        className={`${Space_Mono.variable} ${silkscreen.variable} antialiased`}
       >
         <Navbar />
         {children}

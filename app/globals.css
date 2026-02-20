@@ -17,6 +17,41 @@
   }
 }
 
+/* Atau menggunakan variable CSS langsung */
+.font-silkscreen {
+  font-family: var(--font-silkscreen);
+}
+
+@layer base {
+  h1 {
+    @apply text-3xl;
+    /* Dekat dengan 2em */
+  }
+
+  h2 {
+    @apply text-2xl;
+    /* Tepat 1.5em */
+  }
+
+  h3 {
+    @apply text-xl;
+    /* Dekat dengan 1.17em */
+  }
+
+  h4 {
+    @apply text-lg;
+    /* Sedikit lebih besar dari 1em agar beda dengan P */
+  }
+
+  h5 {
+    @apply text-sm;
+  }
+
+  h6 {
+    @apply text-xs;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
